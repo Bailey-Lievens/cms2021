@@ -1,0 +1,9 @@
+<div class="image_with_text">
+    <div class="top">
+        {{ content.field_media_image }}
+    </div>
+
+    <div class="bottom">
+        {{ content|without("field_media_image") }}
+    </div>
+</div>

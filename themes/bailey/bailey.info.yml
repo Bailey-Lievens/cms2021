@@ -1,0 +1,11 @@
+name: Bailey
+type: theme
+base theme: classy
+description: "A theme made by Bailey :))"
+core_version_requirement: ^8 || ^9
+
+libraries:
+- bailey/global
+
+regions:
+  test: Test
