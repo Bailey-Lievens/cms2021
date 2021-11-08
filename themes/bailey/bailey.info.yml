@@ -5,7 +5,12 @@ description: "A theme made by Bailey :))"
 core_version_requirement: ^8 || ^9
 
 libraries:
+- core/normalize
 - bailey/global
 
 regions:
-  test: Test
+  header: header
+  primary_menu: primary_menu
+  content: content
+  footer: footer
+  disabled: disabled

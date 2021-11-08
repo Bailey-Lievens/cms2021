@@ -3,3 +3,10 @@ global:
   css:
     component:
       css/styles.css: {}
+
+  js:
+    js/nav.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
