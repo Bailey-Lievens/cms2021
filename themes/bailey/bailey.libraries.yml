@@ -4,6 +4,8 @@ global:
     component:
       css/styles.css: {}
 
+nav:
+  version: VERSION
   js:
     js/nav.js: {}
   dependencies:
