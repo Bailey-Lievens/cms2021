@@ -5,6 +5,7 @@
 
 body {
     background-color: rgb(46, 46, 46);
+    height: 100vh;
 }
 
 img {
@@ -73,22 +74,95 @@ img {
 }
 
 /* new articles */
-.news_article {
+.news-article {
     background-color: white;
     
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     width: 400px;
+    height: 420px;
+    margin-top: 4rem;
+
+    border-radius: 10px;
 }
 
-.news_article * {
-    color: rgb(46, 46, 46);
+.news-article h2 {
+    text-align: center;
 }
 
-.news_article p {
-    width: 200px;
+.news-article .node__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field--name-field-featured-image {
+    width: 100%;
+    height: 10rem;
+}
+
+.field--name-field-featured-image img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #2E2E2E;
+}
+
+.category-wrapper .field-category {
+    color: white;
+}
+
+.news-article * {
+    color: #2E2E2E;
+}
+
+.news-article-p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.news-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 1000px) {
+    .news-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .news-wrapper .view-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+
+    .news-article {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 /* Top navigatin */
@@ -193,6 +267,62 @@ nav h2 {
         left: 10px;
         transition: 1s linear;
     }
+}
 
+/* body paragraph */
+.body-paragraph p {
+    background-color: black;
+    padding-left: 20%;
+    padding-right: 20%;
 
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.body-paragraph {
+    margin-bottom: 4rem;
+}
+
+/* FAQ */
+.faq-block {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.faq-block * {
+    color: #2E2E2E;
+}
+
+.faq-block article {
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 3rem;
+
+    padding: 3rem;
+    padding-top: 2rem;
+}
+
+/* footer */
+.footer-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+    background-color: black;
+    
+    padding: 4rem;
+    margin-bottom: 0;
+}
+
+.footer-menu .menu-item a {
+    margin-right: 0;
+}
+
+@media (min-width: 700px) {
+    .footer-menu {
+        flex-direction: row;
+    }
 }
