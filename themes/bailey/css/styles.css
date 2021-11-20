@@ -14,6 +14,13 @@ img {
     object-fit: cover;
 }
 
+.view-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
 /* Image with text */
 .image_with_text {
     display: flex;
@@ -344,7 +351,7 @@ nav h2 {
     width: 100%;
 
     margin-bottom: 2em;
-    margin-top: 3em;
+    margin-top: 7.8rem;
 }
 
 .hero-wrapper .field__item {
@@ -380,6 +387,7 @@ nav h2 {
 
     .hero-wrapper {
         flex-direction: row;
+        margin-top: 5.8rem;
     }
 
     .hero-wrapper .field__item {
@@ -392,7 +400,10 @@ nav h2 {
     }
 
     .hero-wrapper .text-formatted p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-top: 3rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -461,4 +472,71 @@ nav h2 {
 
 .form-wrapper .webform-button--submit:hover {
     background-color: rgb(192, 192, 192);
+}
+
+/* News page */
+.page-node-type-news .news-article {
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 18rem;
+    margin-bottom: 5rem;
+
+    width: 25rem;
+    height: auto;
+}
+
+.page-node-type-news .top img {
+    width: 25rem;
+}
+
+.page-node-type-news .bottom p {
+    width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.page-node-type-news .image_with_text {
+    margin-top: 0;
+}
+
+.page-node-type-news .news-article {
+    margin-top: 10rem;
+}
+
+.page-node-type-news .category-wrapper a {
+    color: white;
+    font-size: 2rem;
+}
+
+@media (min-width: 1000px) {
+    .page-node-type-news .news-article {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        max-width: 55rem;
+    }
+
+    .page-node-type-news .image_with_text {
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .page-node-type-news .bottom p {
+        max-width: 18rem;
+    }
+
+    .page-node-type-news .category-wrapper a {
+        color: black;
+        font-size: 2rem;
+    }
+
+    .page-node-type-news .category-wrapper {
+        background-color: transparent;
+    }
 }
