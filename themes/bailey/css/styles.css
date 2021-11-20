@@ -541,3 +541,20 @@ nav h2 {
         background-color: transparent;
     }
 }
+
+/* FAQ */
+.page-node-type-faq .FAQ-text {
+    margin-top: 10rem;
+    height: 70vh;
+
+    max-width: 20rem;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1000px) {
+    .page-node-type-faq .FAQ-text {
+        max-width: 30rem;
+    }
+}
