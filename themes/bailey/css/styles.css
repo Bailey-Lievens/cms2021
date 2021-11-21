@@ -34,6 +34,14 @@ img {
     margin-bottom: 2em;
 }
 
+.paragraph--view-mode--image-align-top {
+    flex-direction: column;
+}
+
+.paragraph--view-mode--image-align-bottom {
+    flex-direction: column-reverse;
+}
+
 .top img {
     width: 26em;
     height: 20em;
@@ -45,8 +53,23 @@ img {
 
 @media (min-width: 1000px) {
     .image_with_text {
-        flex-direction: row;
         gap: 4em;
+    }
+
+    .paragraph--view-mode--image-align-left {
+        flex-direction: row;
+    }
+
+    .paragraph--view-mode--image-align-right {
+        flex-direction: row-reverse;
+    }
+
+    .paragraph--view-mode--image-align-top {
+        flex-direction: column;
+    }
+
+    .paragraph--view-mode--image-align-bottom {
+        flex-direction: column-reverse;
     }
 }
 
