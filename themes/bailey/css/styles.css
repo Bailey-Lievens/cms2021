@@ -758,3 +758,53 @@ nav h2 {
         max-width: 30rem;
     }
 }
+
+/* Search */
+.search-main {
+    height: 100%;
+    min-height: 80vh;
+    
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 5rem;
+}
+
+.form-search .form-type-textfield {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-search .form-type-textfield input {
+    color: black;
+}
+
+.form-search .form-wrapper input {
+    color: black;
+    border: none;
+}
+
+.search-main .view-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: black;
+    border-radius: 20px;
+    padding: 5rem;
+}
+
+.search-main .news-article {
+    background-color: transparent;
+    display: inline;
+}
+
+.search-main .news-article * {
+    color: white;
+    text-align: left;
+}
+
+.search-main .view-content .views-row {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: rgb(36, 36, 36) dashed 2px;
+}
