@@ -3,7 +3,9 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    paragraph.field_theme.value ? 'paragraph--theme--' ~ paragraph.field_theme.value|clean_class,
+    paragraph.field_border.value ? 'paragraph--border--' ~ paragraph.field_border.value|clean_class
   ]
 %}
 

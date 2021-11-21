@@ -28,7 +28,12 @@ img {
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    padding-top: 1rem;
+    width: 90%;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 
     margin-top: 2em;
     margin-bottom: 2em;
@@ -40,6 +45,91 @@ img {
 
 .paragraph--view-mode--image-align-bottom {
     flex-direction: column-reverse;
+}
+
+.paragraph--theme--light {
+    background-color: white;
+    padding-top: 1rem;
+    width: 90%;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.paragraph--theme--light p {
+    color: black;
+}
+
+.paragraph--theme--light .field__item {
+    color: black;
+}
+
+.paragraph--theme--dark {
+    background-color: black;
+    padding-top: 1rem;
+    width: 90%;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.paragraph--theme--dark p {
+    color: white;
+}
+
+.paragraph--theme--dark .field__item {
+    color: white;
+}
+
+.paragraph--theme--primary {
+    background-color: yellow;
+    padding-top: 1rem;
+    width: 90%;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.paragraph--theme--primary p {
+    color: black;
+}
+
+.paragraph--theme--primary .field__item {
+    color: black;
+}
+
+.paragraph--theme--secondary {
+    background-color: black;
+    padding-top: 1rem;
+    width: 90%;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.paragraph--theme--secondary p {
+    color: white;
+}
+
+.paragraph--theme--secondary .field__item {
+    color: yellow;
+}
+
+.paragraph--border--top {
+    border-top: solid yellow 2px;
+}
+
+.paragraph--border--bottom {
+    border-bottom: solid yellow 2px;
+}
+
+.paragraph--border--top-bottom {
+    border-bottom: solid yellow 2px;
+    border-top: solid yellow 2px;
 }
 
 .top img {
@@ -101,6 +191,55 @@ img {
 
     width: 70%;
     max-width: 40em;
+}
+
+.bg--text--content-align-left p {
+    text-align: left;
+}
+
+.bg--text--content-align-right p {
+    text-align: right;
+}
+
+.bg--text--theme--transparent div {
+    background-color: transparent;
+}
+
+.bg--text--theme--primary div {
+    background-color: transparent;
+}
+
+.bg--text--theme--primary p {
+    color: black;
+}
+
+.bg--text--theme--primary div {
+    background-color: rgba(255, 255, 0, 0.205);
+}
+
+.bg--text--theme--secondary div {
+    background-color: rgba(255, 255, 255, 0.281);
+}
+
+.bg--text--theme--secondary p {
+    color: black;
+}
+
+.bg--text--theme--light p {
+    color: white;
+}
+
+.bg--text--border--top {
+    border-top: yellow 2px solid;
+}
+
+.bg--text--border--bottom {
+    border-bottom: yellow 2px solid;
+}
+
+.bg--text--border--top-bottom {
+    border-top: yellow 2px solid;
+    border-bottom: yellow 2px solid;
 }
 
 @media (min-width: 700px) {
@@ -448,6 +587,8 @@ nav h2 {
 
     margin-left: auto;
     margin-right: auto;
+
+    border-radius: 10px;
 }
 
 .quote-image img {
@@ -456,6 +597,42 @@ nav h2 {
     object-fit: cover;
 }
 
+.quote--theme--transparent {
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.quote--theme--light {
+    background-color: white;
+}
+
+.quote--theme--light .quote-body .field__item {
+    color: black;
+}
+
+.quote--theme--primary {
+    background-color: yellow;
+}
+
+.quote--theme--primary .quote-body .field__item {
+    color: black;
+}
+
+.quote--theme--secondary .field__item:first-child {
+    color: yellow;
+}
+
+.quote--border--top {
+    border-top: yellow 2px solid;
+}
+
+.quote--border--bottom {
+    border-bottom: yellow 2px solid;
+}
+
+.quote--border--top-bottom {
+    border-top: yellow 2px solid;
+    border-bottom: yellow 2px solid;
+}
 
 @media (min-width: 700px) {
     .quote {

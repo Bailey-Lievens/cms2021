@@ -1,5 +1,13 @@
 {% set bg_img_url= file_url(content.field_media_image|field_target_entity.field_media_image.entity.uri.value) %}
 
-<div class="bg_text" style="background-image: url({{bg_img_url}});">
+{%
+  set classes = [
+    paragraph.field_theme.value ? 'bg--text--theme--' ~ paragraph.field_theme.value|clean_class,
+    paragraph.field_border.value ? 'bg--text--border--' ~ paragraph.field_border.value|clean_class,
+    paragraph.field_view_mode ? 'bg--text--' ~ paragraph.field_view_mode.value|clean_class
+  ]
+%}
+
+<div {{ attributes.addClass(classes, "bg_text") }} style="background-image: url({{bg_img_url}});">
     {{ content|without("field_media_image")|without("field_title") }}
 </div>
