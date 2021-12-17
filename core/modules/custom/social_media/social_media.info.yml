@@ -1,0 +1,4 @@
+name: Social Media Bailey
+description: A plugin for social media stuff
+core: 8.x
+type: module
