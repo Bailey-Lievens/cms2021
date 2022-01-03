@@ -3,3 +3,10 @@ bread:
   css:
     component:
       css/form.css: {}
+
+  js:
+    js/toggleVisibility.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
