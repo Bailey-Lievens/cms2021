@@ -1,0 +1,4 @@
+name: Bread form
+description: A plugin that creates a sick bread form.
+core: 8.x
+type: module

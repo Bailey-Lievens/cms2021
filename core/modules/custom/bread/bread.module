@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function bread_theme() {
+  return [
+    'bread' => [
+      'variables' => [],
+    ],
+  ];
+}
