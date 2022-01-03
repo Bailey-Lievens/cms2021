@@ -33,6 +33,7 @@
                             alert("Select at least one type of dessert.🍦");
                         }
                     }
+                    console.log(formData);
                     e.preventDefault();
                 })
 
