@@ -2,4 +2,4 @@ bread:
   version: VERSION
   css:
     component:
-      'https://use.fontawesome.com/releases/v5.5.0/css/all.css': { type: external }
+      css/form.css: {}
