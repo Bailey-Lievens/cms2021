@@ -1,0 +1,4 @@
+type: module
+name: GetThatBread
+description: 'Custom module for gamers to get that bread.'
+core_version_requirement: ^8.8 || ^9

@@ -1,0 +1,23 @@
+bread.overview:
+  title: 'Bread order overview'
+  description: 'All bread orders can be found here'
+  weight: 10
+  parent: system.admin_config_ui
+  route_name: settings.overview
+  menu_name: order overview
+
+addition.form:
+  title: 'Bread add type of bread/pastry'
+  description: 'Add more bread and/or pastries here'
+  weight: 11
+  parent: system.admin_config_ui
+  route_name: addContent.form
+  menu_name: add bread/pastry types
+
+items.overview:
+  title: 'Bread all items'
+  description: 'Overview of all available items'
+  weight: 12
+  parent: system.admin_config_ui
+  route_name: items.overview
+  menu_name: item overview

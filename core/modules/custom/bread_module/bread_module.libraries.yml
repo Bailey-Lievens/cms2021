@@ -1,0 +1,5 @@
+bread-module:
+  version: 1
+  css:
+    component:
+      'assets/css/app.css': {}

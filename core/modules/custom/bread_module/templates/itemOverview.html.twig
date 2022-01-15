@@ -1,0 +1,22 @@
+<h1> Item overview </h1>
+
+<table>
+<thead>
+<tr>
+    <th>type:</th>
+    <th>item:</th>
+    <th>price:</th>
+    <th>delete:</th>
+  </tr>
+</thead>
+<tbody>
+  {% for item in items %}
+    <tr>
+      <td>{{item.order_type}}</td>
+      <td>{{ item.items }}</td>
+      <td>{{ item.items_price }}</td>
+      <td><a href="delete/{{ item.id }}">delete</a></td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>

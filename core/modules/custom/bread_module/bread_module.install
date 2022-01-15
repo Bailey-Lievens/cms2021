@@ -1,0 +1,118 @@
+<?php
+
+function bread_module_schema()
+{
+    $schema['bread_module_orders'] = [
+        'description' => 'Stores orders made by the module',
+        'fields' => [
+            'id' => [
+                'description' => 'id for the table',
+                'type' => 'serial',
+                'not null' => true,
+                'unsigned' => true
+            ],
+            'first_name' => [
+                'description' => 'first name',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 100,
+                'default' => ''
+            ],
+            'last_name' => [
+                'description' => 'last name',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 100,
+                'default' => ''
+            ],
+            'phone' => [
+                'description' => 'phone number',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 100,
+                'default' => '040000'
+            ],
+            'order_type' => [
+                'description' => 'bread or pastry or both ordered',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 32,
+                'default' => ''
+            ],
+            'order_items' => [
+                'description' => 'values of items that where ordered',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 500,
+                'default' => ''
+            ],
+            'order_date' => [
+                'description' => 'timestamp when the items where ordered',
+                'type' => 'int',
+                'default' => 0,
+                'unsigned' => true,
+                'not null' => true
+            ],
+        ],
+        'primary key' => ['id']
+    ];
+
+    $schema['bread_module_types'] = [
+        'description' => 'Stores the types of bread and pastries added by the company',
+        'fields' => [
+            'id' => [
+                'description' => 'id',
+                'type' => 'serial',
+                'not null' => true,
+                'unsigned' => true
+            ],
+            'order_type' => [
+                'description' => 'type',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 32,
+                'default' => ''
+            ],
+            'items' => [
+                'description' => 'item name',
+                'type' => 'varchar',
+                'not null' => true,
+                'length' => 255,
+                'default' => ''
+            ],
+            'items_price' => [
+                'description' => 'price of the item',
+                'type' => 'numeric',
+                'precision' => 4,
+                'scale' => 2,
+                'default' => 0,
+                'unsigned' => true,
+                'not null' => true
+            ]
+        ],
+        'primary key' => ['id']
+    ];
+    return $schema;
+}
+
+function bread_module_update_8001()
+{
+    $database = Drupal::database();
+    $schema = $database->schema();
+    $table_name = 'bread_module_orders';
+  
+    $table_schema =  bread_module_schema();
+
+    $schema->createTable($table_name, $table_schema['bread_module_orders']);
+}
+
+function bread_module_update_8002()
+{
+    $database = Drupal::database();
+    $schema = $database->schema();
+    $table_name = 'bread_module_types';
+  
+    $table_schema =  bread_module_schema();
+
+    $schema->createTable($table_name, $table_schema['bread_module_types']);
+}

@@ -1,0 +1,21 @@
+<?php
+
+function bread_module_theme()
+{
+    return [
+        'overview' => [
+            'variables' => [
+                'orders' => [
+                    
+                ]
+            ]
+        ],
+        'itemOverview' => [
+            'variables' => [
+                'items' => [
+                    
+                ]
+            ]
+        ]
+    ];
+}

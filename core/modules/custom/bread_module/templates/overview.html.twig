@@ -1,0 +1,31 @@
+<h1> Order overview </h1>
+
+{# Table for all orders #}
+<table>
+<thead>
+<tr>
+    <th>Order number</th>
+    <th>Full name: </th>
+    <th>Phone number:</th>
+    <th>Order type</th>
+    <th>Order</th>
+    <th>Order date</th>
+    <th>Status</th>
+  </tr>
+</thead>
+<tbody>
+  {% for order in orders %}
+    {# remove not selected bread and pastries #}
+    {% set ordered_items =  order.order_items|split(',0') %} 
+    <tr>
+      <td>{{ order.id }}</td>
+      <td>{{order.first_name}} {{ order.last_name }}</td>
+      <td>{{ order.phone }}</td>
+      <td>{{ order.order_type }}</td>
+      <td>{{ ordered_items[0] }}</td>
+      <td>{{ order.order_date|date("d/m/Y") }}</td>
+      <td><a href="completed/{{ order.id }}">Mark as completed</a></td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
