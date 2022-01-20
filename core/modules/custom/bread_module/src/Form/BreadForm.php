@@ -114,7 +114,6 @@ class BreadForm extends FormBase
             $ordered_pastry .= $pastry . ",";
         }
 
-
         //Stringify the order
         if ($form_state->getValue('select_bread') == 1 && $form_state->getValue('select_pastry') == 1) {
             $order_type = "both";

@@ -5,14 +5,14 @@ namespace Drupal\bread_module\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class OverviewController extends ControllerBase
+class breadController extends ControllerBase
 {
     //Return page for all orders
     public function overviewPage()
     {
         return [
             '#theme' => 'overview',
-            '#orders' => OverviewController::getOrders()
+            '#orders' => breadController::getOrders()
           ];
     }
 
@@ -21,7 +21,7 @@ class OverviewController extends ControllerBase
     {
         return [
             '#theme' => 'itemOverview',
-            '#items' => OverviewController::getItems()
+            '#items' => breadController::getItems()
         ];
     }
 
@@ -32,7 +32,7 @@ class OverviewController extends ControllerBase
             ->condition('id', $item)
             ->execute();
         
-        OverviewController::my_goto('/IMD-THEMING/nl/admin/config/user-interface/bread-module/itemOverview');
+        breadController::my_goto('/IMD-THEMING/nl/admin/config/user-interface/bread-module/itemOverview');
     }
 
     //Complete order item and reload the same page
@@ -42,7 +42,7 @@ class OverviewController extends ControllerBase
             ->condition('id', $order)
             ->execute();
 
-        OverviewController::my_goto('/IMD-THEMING/nl/admin/config/user-interface/bread-module/overview');
+        breadController::my_goto('/IMD-THEMING/nl/admin/config/user-interface/bread-module/overview');
     }
     
     //Return the redirect to the given page

@@ -59,7 +59,5 @@ class AddForm extends FormBase
                 'items_price' => $form_state->getValue('price')
             ])
             ->execute();
-
-        \Drupal::messenger()->addMessage('The item has been added to the list of items.', 'success');
     }
 }

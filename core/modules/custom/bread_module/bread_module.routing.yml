@@ -1,7 +1,7 @@
 settings.overview:
   path: '/admin/config/user-interface/bread-module/overview'
   defaults:
-    _controller: '\Drupal\bread_module\Controller\OverviewController::OverviewPage'
+    _controller: '\Drupal\bread_module\Controller\breadController::OverviewPage'
   requirements:
     _permission: 'access administration pages'
 
@@ -15,20 +15,20 @@ addContent.form:
 items.overview:
   path: '/admin/config/user-interface/bread-module/itemOverview'
   defaults:
-    _controller: '\Drupal\bread_module\Controller\OverviewController::ItemOverviewPage'
+    _controller: '\Drupal\bread_module\Controller\breadController::ItemOverviewPage'
   requirements:
     _permission: 'access administration pages'
 
 delete.items.overview: 
   path: '/admin/config/user-interface/bread-module/delete/{item}'
   defaults:
-    _controller: '\Drupal\bread_module\Controller\OverviewController::DeleteItem'
+    _controller: '\Drupal\bread_module\Controller\breadController::DeleteItem'
   requirements:
     _permission: 'access administration pages'
 
 complete.orders.overview: 
   path: '/admin/config/user-interface/bread-module/completed/{order}'
   defaults:
-    _controller: '\Drupal\bread_module\Controller\OverviewController::CompleteOrder'
+    _controller: '\Drupal\bread_module\Controller\breadController::CompleteOrder'
   requirements:
     _permission: 'access administration pages'
